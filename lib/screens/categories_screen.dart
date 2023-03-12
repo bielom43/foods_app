@@ -13,7 +13,18 @@ class FoodsApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Bem-Vindo!',
       theme: ThemeData(
-        primarySwatch: Colors.cyan,
+        colorScheme: ColorScheme.fromSwatch().copyWith(
+          primary: Colors.cyan[800],
+          secondary: Colors.red,
+        ),
+        canvasColor: Color.fromARGB(255, 233, 210, 210),
+        fontFamily: 'Raleway',
+        textTheme: ThemeData.light().textTheme.copyWith(
+              titleSmall: const TextStyle(
+                fontSize: 20,
+                fontFamily: 'RobotoCondensed',
+              ),
+            ),
       ),
       home: CategoriesScreen(),
     );
@@ -27,7 +38,13 @@ class CategoriesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Vamos cozinhar!'),
+        title: Center(
+            child: Text(
+          'Vamos cozinhar!',
+          style: TextStyle(
+            fontFamily: 'Raleway',
+          ),
+        )),
       ),
       body: Padding(
         padding: const EdgeInsets.all(14),
