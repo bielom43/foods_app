@@ -12,7 +12,18 @@ class CategoriesMealsScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(category.title),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Text(
+              textAlign: TextAlign.start,
+              category.title,
+              style: TextStyle(
+                fontFamily: 'Raleway',
+              ),
+            ),
+          ],
+        ),
       ),
       body: Center(
         child: Text('Receitas por categoria ${category.id}'),
