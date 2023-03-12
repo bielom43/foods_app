@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 //files import
 import '../components/category_item.dart';
 import '../data/dummy_data.dart';
+import '../screens/categories_meals_screen.dart';
 
 class FoodsApp extends StatelessWidget {
   const FoodsApp({Key? key}) : super(key: key);
@@ -27,6 +28,9 @@ class FoodsApp extends StatelessWidget {
             ),
       ),
       home: CategoriesScreen(),
+      routes: {
+        '/categories-meals': (ctx) => CategoriesMealsScreen(),
+      },
     );
   }
 }
