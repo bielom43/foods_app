@@ -1,6 +1,6 @@
 //packages import
 import 'package:flutter/material.dart';
 //files import
-import 'screens/home_page.dart';
+import 'screens/categories_screen.dart';
 
 void main() => runApp(FoodsApp());
