@@ -1,12 +1,13 @@
 //packages import
 import 'package:flutter/material.dart';
-import 'package:foods_app/screens/meal_details_screen.dart';
 //files import
 import '../components/category_item.dart';
 import '../data/dummy_data.dart';
 import '../screens/categories_meals_screen.dart';
 import '../utils/app_routes.dart';
 import 'tabs_screen.dart';
+import 'package:foods_app/screens/meal_details_screen.dart';
+import 'package:foods_app/screens/settings_screen.dart';
 
 class FoodsApp extends StatelessWidget {
   const FoodsApp({Key? key}) : super(key: key);
@@ -34,6 +35,7 @@ class FoodsApp extends StatelessWidget {
         AppRoutes.HOME: (ctx) => TabsScreen(),
         AppRoutes.CATEGORIES_MEALS: (ctx) => CategoriesMealsScreen(),
         AppRoutes.MEAL_DETAIL: (ctx) => MealDetailScreen(),
+        AppRoutes.SETTINGS: (ctx) => SettingsScreen(),
       },
     );
   }
