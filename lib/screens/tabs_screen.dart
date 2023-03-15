@@ -40,6 +40,7 @@ class _TabsScreenState extends State<TabsScreen> {
               style: TextStyle(
                 fontFamily: 'Raleway',
               ),
+              textAlign: TextAlign.start,
             ),
           ),
         ),
