@@ -39,16 +39,11 @@ class MealDetailScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Text(
-              meal.title,
-              style: TextStyle(
-                fontFamily: 'Raleway',
-              ),
-            ),
-          ],
+        title: Text(
+          meal.title,
+          style: TextStyle(
+            fontFamily: 'Raleway',
+          ),
         ),
       ),
       body: SingleChildScrollView(
@@ -101,6 +96,12 @@ class MealDetailScreen extends StatelessWidget {
             ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.of(context).pop();
+        },
+        child: Icon(Icons.favorite),
       ),
     );
   }
